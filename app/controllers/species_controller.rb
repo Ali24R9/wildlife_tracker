@@ -7,15 +7,16 @@ class SpeciesController < ApplicationController
 
   def show
     @specie = Species.find(params[:id])
+    @sighting = Sighting.new
     render('species/show.html.erb')
   end
 
   def create
     @specie = Species.create(params[:species])
-
     if @specie.save
       render('species/success.html.erb')
     else
+      @species = Species.all
       render('species/index.html.erb')
     end
   end
