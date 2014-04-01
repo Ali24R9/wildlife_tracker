@@ -1,0 +1,12 @@
+<h1>Here is your Animal</h1>
+
+<p><%= @specie.species %></p>
+
+<p><a href="/species">Return to home page</a></p>
+
+<p><a href="/species/<%=@specie.id%>/edit">Edit</a></p>
+
+<p><a href="/species/<%= @specie.id %>"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
